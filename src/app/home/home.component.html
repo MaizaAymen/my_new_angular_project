@@ -1,0 +1,30 @@
+
+<!--<div class="face-snap-card"><p [style]="pstyle">{{title}}
+</p><br>
+<p>mise en ligne le {{createDate}}</p>
+<img [src]="link" alt="">
+<h1>{{description}}</h1>
+<a [href]="linkk">clique this</a>
+<p>
+    {{snaps}}
+</p>
+<p>{{number}}</p>
+<button (click)="inc()">inc</button>
+<button (click)="dec()">dec</button>
+</div> 
+<h1>my name is {{samir.firstname}}</h1>
+<h1>my last name is {{samir.lastname}}</h1>
+<h1>my age is {{number}}</h1>
+<input type="text" [(ngModel)]="samir.lastname">
+<input type="text" [(ngModel)]="samir.firstname">-->
+<input type="number" [(ngModel)]="number">
+
+<div [ngSwitch]="number">
+    <p *ngSwitchCase="1">first</p>
+    <p *ngSwitchCase="2">second</p>
+    <p *ngSwitchCase="3">third</p>
+</div>
+
+<div *ngFor="let item of arrays;index as i">
+    <p>{{i}}:{{item}}</p>
+</div>

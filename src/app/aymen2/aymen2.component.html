@@ -1,0 +1,16 @@
+<div class="message-card">
+    <div class="message-header">
+      <h3 class="message-name">{{ message.name }}</h3>
+      <p class="message-email">{{ message.email }}</p>
+    </div>
+    
+    <div class="message-content">
+      <p>{{ message.message }}</p>
+    </div>
+    
+    <button type="button" class="delete-btn" (click)="onDelete()" aria-label="Delete Message">
+      <span class="btn-text">Delete</span>
+      <i class="fas fa-trash-alt"></i> <!-- Example icon from Font Awesome -->
+    </button>
+  </div>
+          

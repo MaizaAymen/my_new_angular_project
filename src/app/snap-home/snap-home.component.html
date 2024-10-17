@@ -1,0 +1,69 @@
+<div class="face-snap-card">
+    <p>Hello</p>
+    <h2>{{faceSnap.snaps}}</h2>
+    <p>mise en ligne le {{faceSnap.createdate}}</p>
+    <img [src]="faceSnap.imageurl" alt="faceSnap.title">
+    <h1>{{faceSnap.description}}</h1>
+    <button (click)="onSnap()">{{buttonText}}</button>
+    {{faceSnap.snaps}}
+</div>
+<div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'Oops, unSnap!' }">
+    <h2>{{ faceSnap.title }}</h2>
+    <p>Mis en ligne le {{ faceSnap.createdate }}</p>
+    <img [src]="faceSnap.imageurl" [alt]="faceSnap.title">
+    
+    <p>{{ faceSnap.description }}</p>
+    <p>
+      <button (click)="onSnap()">{{ buttonText }}</button>
+      💖 {{ faceSnap.snaps }}
+    </p>
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="name"
+        name="name"
+        required
+      >
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email"  required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" [(ngModel)]="message" name="message"  required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  
+  
+   <table *ngIf="isSubmitted">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let msg of messages;let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ name }}</td>
+      <td>{{ email }}</td>
+      <td>{{ message }}</td>
+    </tr>
+    </tbody>
+  </table>
+</form>
+<div class="flex-container" *ngIf="isSubmitted">
+  <app-aymen2
+    *ngFor="let msg of messages;let i = index"
+    [message]="msg"
+    [index]="i"
+    (delete)="deleteMessage($event)"
+  ></app-aymen2>
+</div>

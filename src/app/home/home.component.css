@@ -1,0 +1,12 @@
+*{
+    margin: auto;
+    width: 30%;
+    border-style: dashed double none;
+    border-radius: 5%;
+}
+.face-snap-card {
+    width: 35%;
+    img {
+    width: 100%;
+    }
+    }
