@@ -1,0 +1,34 @@
+.custom-toolbar {
+  background-color: var(--toolbar-background, #1976d2); /* Couleur de fond personnalisée */
+  color: rgb(35, 25, 83); /* Couleur du texte */
+  padding: 0 16px; /* Espacement intérieur */
+  display: flex;
+  align-items: center;
+}
+
+.example-icon {
+  color:black; /* Couleur des icônes */
+}
+
+.app-title {
+  font-size: 1.5rem; /* Taille de police du titre */
+  font-weight: bold;
+}
+
+.example-spacer {
+  flex: 1; /* Remplit l'espace disponible */
+}
+
+.favorite-icon {
+  color: var(--favorite-color, #e91e63); /* Couleur personnalisée pour le bouton "favorite" */
+}
+
+button[mat-icon-button] {
+  margin: 0 8px; /* Espacement entre les boutons */
+}
+
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 1.2rem; /* Réduction de la taille du texte sur les petits écrans */
+  }
+}

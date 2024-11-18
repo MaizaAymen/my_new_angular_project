@@ -44,4 +44,5 @@ messages:Array<any>=[];
   deleteMessage(index: number) {
     this.messages.splice(index, 1)
   }
+  
 }

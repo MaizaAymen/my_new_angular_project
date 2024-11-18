@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {faceSnapHome} from "../model/face-snap"
-
-
+import { FaceSnapsService } from './service/facesnaps.service'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] 
+  styleUrls: ['./app.component.css'], 
 })
 export class AppComponent implements OnInit {
   // title = 'aymenanggular2';
@@ -50,4 +50,7 @@ onSubmit():void{
   deleteMessage(index: number) {
     this.messages.splice(index, 1)
   }
+ 
+  
+
 }
